@@ -1,17 +1,14 @@
-<!doctype html><html lang="zh-Hant" data-pal="teal"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>第 26 天 每天自動抓匯率｜28 天 AI 入門</title><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header class="topbar"><button type="button" aria-label="打開課表" aria-controls="schedule" aria-expanded="false">☰</button><span>第 26 天 每天自動抓匯率</span></header><nav class="nav" id="schedule" aria-label="課表"><a class="brand" href="index.html">28 天 AI 入門</a><div class="stage">第 1 階段・當 Google 用</div><a class="day" href="day01.html"><b>1</b><span>白話認識 AI</span><span class="st">★</span></a><a class="day" href="day02.html"><b>2</b><span>問答與查證</span><span class="st">★</span></a><a class="day" href="day03.html"><b>3</b><span>資料保護</span><span class="st">★</span></a><div class="stage">第 2 階段・整理與分析</div><a class="day" href="day04.html"><b>4</b><span>摘要</span><span class="st">★</span></a><a class="day" href="day05.html"><b>5</b><span>寫作與潤稿</span><span class="st">★</span></a><a class="day" href="day06.html"><b>6</b><span>旅遊規劃</span><span class="st">★</span></a><a class="day" href="day07.html"><b>7</b><span>看懂合約與帳單</span><span class="st">★</span></a><a class="day" href="day08.html"><b>8</b><span>檢查報告與用藥問題</span><span class="st">★</span></a><a class="day" href="day09.html"><b>9</b><span>記帳、預算與比價</span></a><a class="day" href="day10.html"><b>10</b><span>試算表與資料分析</span><span class="st">★</span></a><a class="day" href="day11.html"><b>11</b><span>簡報</span></a><a class="day" href="day12.html"><b>12</b><span>繪圖</span></a><a class="day" href="day13.html"><b>13</b><span>會議紀錄、履歷、求職信</span></a><div class="stage">第 2 階段・技能</div><a class="day" href="day14.html"><b>14</b><span>哪些工作值得做成技能</span><span class="st">★</span></a><a class="day" href="day15.html"><b>15</b><span>Gemini 與 Claude 的技能工具</span></a><a class="day" href="day16.html"><b>16</b><span>技能實作與維護</span><span class="st">★</span></a><div class="stage">第 2 階段・Vibe Coding</div><a class="day" href="day17.html"><b>17</b><span>把想法寫成規格</span><span class="st">★</span></a><a class="day" href="day18.html"><b>18</b><span>VS Code、Git、GitHub</span><span class="st">★</span></a><a class="day" href="day19.html"><b>19</b><span>程式代理</span><span class="st">★</span></a><a class="day" href="day20.html"><b>20</b><span>匯率換算器</span><span class="st">★</span></a><a class="day" href="day21.html"><b>21</b><span>API 入門</span><span class="st">★</span></a><a class="day" href="day22.html"><b>22</b><span>部署到 GitHub Pages</span><span class="st">★</span></a><a class="day" href="day23.html"><b>23</b><span>卡關處理</span></a><div class="stage">第 3 階段・代理與排程</div><a class="day" href="day24.html"><b>24</b><span>代理與權限</span><span class="st">★</span></a><a class="day" href="day25.html"><b>25</b><span>聊天 AI 內建排程</span></a><a class="day cur" href="day26.html" aria-current="page"><b>26</b><span>每天自動抓匯率</span></a><div class="stage">第 4 階段・主動式 AI</div><a class="day" href="day27.html"><b>27</b><span>主動式 AI</span></a><div class="stage">回顧</div><a class="day" href="day28.html"><b>28</b><span>回顧與盤點</span></a></nav><button class="scrim" type="button" aria-label="關閉課表" tabindex="-1" hidden></button><main id="main"><article class="art"><div class="eyebrow">第 3 階段・代理與排程</div><h1>第 26 天｜每天自動抓匯率</h1><div class="meta"><span class="tag">先修：<a href="day21.html">第 21–22、24 天</a></span></div><p class="subtitle">第 26 天｜GitHub Actions 每天自動抓匯率</p><h3 id="sec-1">白話觀念卡</h3>
+<!doctype html><html lang="zh-Hant" data-pal="teal"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>第 26 天 每天自動抓匯率｜28 天 AI 入門</title><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header class="topbar"><button type="button" aria-label="打開課表" aria-controls="schedule" aria-expanded="false">☰</button><span>第 26 天 每天自動抓匯率</span></header><nav class="nav" id="schedule" aria-label="課表"><a class="brand" href="index.html">28 天 AI 入門</a><div class="stage">第 1 階段・當 Google 用</div><a class="day" href="day01.html"><b>1</b><span>白話認識 AI</span><span class="st">★</span></a><a class="day" href="day02.html"><b>2</b><span>問答與查證</span><span class="st">★</span></a><a class="day" href="day03.html"><b>3</b><span>資料保護</span><span class="st">★</span></a><div class="stage">第 2 階段・整理與分析</div><a class="day" href="day04.html"><b>4</b><span>摘要</span><span class="st">★</span></a><a class="day" href="day05.html"><b>5</b><span>寫作與潤稿</span><span class="st">★</span></a><a class="day" href="day06.html"><b>6</b><span>旅遊規劃</span><span class="st">★</span></a><a class="day" href="day07.html"><b>7</b><span>看懂合約與帳單</span><span class="st">★</span></a><a class="day" href="day08.html"><b>8</b><span>檢查報告與用藥問題</span><span class="st">★</span></a><a class="day" href="day09.html"><b>9</b><span>記帳、預算與比價</span></a><a class="day" href="day10.html"><b>10</b><span>試算表與資料分析</span><span class="st">★</span></a><a class="day" href="day11.html"><b>11</b><span>簡報</span></a><a class="day" href="day12.html"><b>12</b><span>繪圖</span></a><a class="day" href="day13.html"><b>13</b><span>會議紀錄、履歷、求職信</span></a><div class="stage">第 2 階段・技能</div><a class="day" href="day14.html"><b>14</b><span>哪些工作值得做成技能</span><span class="st">★</span></a><a class="day" href="day15.html"><b>15</b><span>Gemini 與 Claude 的技能工具</span></a><a class="day" href="day16.html"><b>16</b><span>技能實作與維護</span><span class="st">★</span></a><div class="stage">第 2 階段・Vibe Coding</div><a class="day" href="day17.html"><b>17</b><span>把想法寫成規格</span><span class="st">★</span></a><a class="day" href="day18.html"><b>18</b><span>準備工具（選路線）</span><span class="st">★</span></a><a class="day" href="day19.html"><b>19</b><span>讓 AI 動手改</span><span class="st">★</span></a><a class="day" href="day20.html"><b>20</b><span>匯率換算器</span><span class="st">★</span></a><a class="day" href="day21.html"><b>21</b><span>API 入門</span><span class="st">★</span></a><a class="day" href="day22.html"><b>22</b><span>部署到 GitHub Pages</span><span class="st">★</span></a><a class="day" href="day23.html"><b>23</b><span>卡關處理</span></a><div class="stage">第 3 階段・代理與排程</div><a class="day" href="day24.html"><b>24</b><span>代理與權限</span><span class="st">★</span></a><a class="day" href="day25.html"><b>25</b><span>聊天 AI 內建排程</span></a><a class="day cur" href="day26.html" aria-current="page"><b>26</b><span>每天自動抓匯率</span></a><div class="stage">第 4 階段・主動式 AI</div><a class="day" href="day27.html"><b>27</b><span>主動式 AI</span></a><div class="stage">回顧</div><a class="day" href="day28.html"><b>28</b><span>回顧與盤點</span></a></nav><button class="scrim" type="button" aria-label="關閉課表" tabindex="-1" hidden></button><main id="main"><article class="art"><div class="eyebrow">第 3 階段・代理與排程</div><h1>第 26 天｜每天自動抓匯率</h1><div class="meta"><span class="tag">先修：<a href="day21.html">第 21–22、24 天</a></span><span class="tag route-tag">分 4 條路線，選一條走</span></div><p class="subtitle">第 26 天｜GitHub Actions 每天自動抓匯率</p><h3 id="sec-1">白話觀念卡</h3>
 <p>今天不用讓 AI 每天醒來工作。AI 幫我們寫好程式後，由 GitHub Actions 像定時開關一樣每天執行。</p>
 <p>央行 API 不允許一般網站跨來源讀取，所以不要讓網頁直接抓央行資料。改由 Actions 下載資料，只留下最新幾筆存成 <code>rates.json</code>，再讓 GitHub Pages 網頁讀取自己網站裡的檔案。</p>
 <p>這個 API 不用金鑰。未來若改用需要金鑰的服務，要放在 GitHub Secrets，不能寫進網頁、程式碼或執行紀錄。匯率只供工具練習與資料整理，不是實際換匯成交價或投資建議。</p>
 <h3 id="sec-2">示範工具</h3>
-<p><strong>Gemini CLI</strong>：附件記載可用 Google 登入、每日 1,000 次模型請求，適合協助修改既有專案；需要 Node.js 20 以上。實際每日執行的是 <strong>GitHub Actions，不是 AI</strong>。</p>
-<ul>
-<li><strong>ChatGPT／Codex 免費使用</strong>：附件只確認 Free／Go 有限使用且受逐步開放影響，不能推論 VS Code、CLI 與桌面 App 都有相同免費資格。</li>
-<li><strong>Claude</strong>：附件未提供 Claude Code 的免費可用資格，寫「查無」；可用聊天協助產生程式，但不要當成已取得程式代理權限。</li>
-</ul>
-<p>GitHub 部分：附件確認，公開儲存庫使用標準 GitHub-hosted runner 免費；GitHub Free 另有每月 2,000 分鐘的額度說明。本課沿用公開儲存庫，不放個資或機密。</p>
+<p>免費主線用 AI 網頁聊天提供完整 HTML／YAML，再由學員在 GitHub 網頁建立檔案；②使用已開通的 Codex 桌面版或符合資格的 Claude Code 桌面版，③使用 VS Code 官方擴充功能。Codex Free／Go 桌面逐步開放，不能推定 IDE 同資格；Claude Code 需付費資格。④保留本地小作品。</p>
+<p>實際每天執行的是 GitHub Actions，不需每日呼叫付費 AI API。公開 repo 的標準 GitHub-hosted runner 免費，其他情況須核對方案限制；不承諾 AI 免費修改輪數。</p>
+<p><strong>排程限制：</strong>排程只在預設分支執行；公開 repo 60 天沒有活動會自動停用，高負載可能延遲或丟棄工作，不能保證準點。</p>
 <h3 id="sec-3">步驟</h3>
 <ol>
-<li><strong>打開 VS Code</strong>，開啟第 2 階段的匯率換算器專案。先保存目前版本，再請程式代理依下方提示詞提出修改計畫；不要直接授權它推送或更改帳號設定。</li>
+<li><strong>打開既有匯率換算器專案</strong>，先依所選路線保存版本，再請 AI 依下方提示詞提出修改計畫；不要直接授權它推送或更改帳號設定。①②③完成以下步驟；④直接看本節末尾的路線說明。</li>
 <li>在專案建立 <code>.github/workflows/update-rates.yml</code>，貼入下方完整範例。它會每天 <strong>UTC 01:00，也就是台灣時間 09:00</strong> 執行，並保留手動觸發入口。排程可能延遲，不保證準點。</li>
 <li>把網頁讀取來源改成相對路徑 <code>./rates.json</code>。到 GitHub 儲存庫的 <strong>Settings → Pages</strong>，將發布來源設為 <strong>GitHub Actions</strong>。本範例會在更新資料後直接部署，避免只 commit 資料卻沒有更新網站。</li>
 <li>將修改推送至預設分支。開啟儲存庫的 <strong>Actions</strong>，選擇此工作流程並按 <strong>Run workflow</strong>；確認下載、資料檢查、commit 與 Pages 部署成功。</li>
@@ -19,7 +16,7 @@
 <li>保留接下來連續兩天的自動執行紀錄，核對觸發類型是 <code>schedule</code>，並確認網站資料日期。假日可能沒有新匯率，因此「每天成功檢查」不等於「每天一定新增 commit」。</li>
 </ol>
 <p><strong>本日產出：連續兩天自動檢查／更新紀錄，加一次失敗通知。</strong>未完成前寫「待驗收」，不要用兩次手動執行代替。</p>
-<h4>完整 workflow</h4>
+<p><strong>完整 workflow</strong></p>
 <p>檔案位置：<strong><code>.github/workflows/update-rates.yml</code></strong></p>
 <p>此範例依題目提供的 API 格式編寫；<strong>本次未連線執行，不宣稱已實測此 workflow</strong>。前提是專案根目錄有可發布的 <code>index.html</code>，且 Pages 發布來源已改為 GitHub Actions。</p>
 <div class="code"><button class="copy" type="button">複製</button><pre><code class="language-yaml">name: 每日更新匯率並發布網站
@@ -175,7 +172,7 @@ jobs:
 <li>此處沒有使用自訂金鑰。若未來服務需要金鑰，應存入儲存庫的 <strong>Settings → Secrets and variables → Actions</strong>，再由 workflow 以 <code>${{ secrets.金鑰名稱 }}</code> 讀取；不要傳到前端。</li>
 <li>發布前檢查檔案內容：此範例會發布專案中的網站檔案，不能把私人文件放進專案。公開儲存庫本身也不適合保存機密。</li>
 </ul>
-<h4>網頁讀取方式</h4>
+<p><strong>網頁讀取方式</strong></p>
 <p>將原本直接抓央行 API 的部分，改成讀取同網站資料。以下是讀取與換算的核心，不是完整介面：</p>
 <div class="code"><button class="copy" type="button">複製</button><pre><code class="language-javascript">async function loadLatestRate() {
   const response = await fetch(&quot;./rates.json&quot;, {
@@ -208,11 +205,32 @@ jobs:
 // 美元換台幣：美元金額 * rate
 // 台幣換美元：台幣金額 / rate
 // 畫面應顯示資料日期；讀取失敗時顯示錯誤，不要假裝是最新資料。</code></pre></div>
-<h3 id="sec-4">範例提示詞</h3>
-<p>貼給程式代理前，先確認工作區沒有金鑰與私人檔案。</p>
+<div class="routes"><div class="route-tabs" role="tablist" aria-label="選擇路線"><button type="button" role="tab" data-route="1" aria-selected="true">① 網頁版</button><button type="button" role="tab" data-route="2" aria-selected="false">② 桌面 App</button><button type="button" role="tab" data-route="3" aria-selected="false">③ VS Code</button><button type="button" role="tab" data-route="4" aria-selected="false">④ 本地小作品</button></div><div class="route" data-route="1" role="tabpanel"><h4>路線①：網頁版</h4>
+<ol>
+<li>打開 GitHub repo，依共用提示詞向 AI 索取完整新版 <code>index.html</code> 與 YAML；聊天不能直接改你電腦檔案。</li>
+<li>Add file → Create new file，輸入 <code>.github/workflows/update-rates.yml</code>，貼入上方完整 workflow，核對後 Commit changes 到預設分支；在網頁編輯 <code>index.html</code>，改成讀取同站 <code>./rates.json</code> 並提交。</li>
+<li>到 Settings → Pages 改用 GitHub Actions，Actions → Run workflow 測試；依上方共用步驟完成故意失敗、還原與兩天排程驗收。還原網址時在網頁編輯並重新 commit；需要舊內容可從 History 複製貼回。</li>
+</ol>
+</div><div class="route" data-route="2" role="tabpanel"><h4>路線②：桌面 App</h4>
+<ol>
+<li>桌面 App 開啟專案，先提出計畫，再在沙箱／Manual 權限內建立 <code>.github/workflows/update-rates.yml</code> 與修改 HTML；沿用第 2 天安全提醒，不開 Full Access／Bypass 省略檢查。</li>
+<li>GitHub Desktop 的 Changes 檢查 YAML、資料路徑與 HTML，填 Summary、Commit to 預設分支、Push origin。</li>
+<li>在 GitHub 網頁設定 Pages 為 GitHub Actions，手動執行並完成共用驗收；故意改錯後以 Desktop 檢查、提交與推送，還原可在 History 對該錯誤 commit 用 Revert Changes in Commit，再 push。</li>
+</ol>
+</div><div class="route" data-route="3" role="tabpanel"><h4>路線③：VS Code</h4>
+<ol>
+<li>VS Code 開啟專案，在 <code>.github/workflows/update-rates.yml</code> 貼入完整 workflow，修改 <code>index.html</code> 讀取同站資料；也可請已選定代理協助，但須檢查實際差異。</li>
+<li>Source Control 核對修改，僅暫存需要的檔案，commit 並推送至預設分支。</li>
+<li>GitHub 網頁設定 Pages 為 GitHub Actions、Run workflow；完成共用驗收。故意改錯 API 後保存失敗證據，再改回網址、檢查、commit、push 並重跑。</li>
+</ol>
+</div><div class="route" data-route="4" role="tabpanel"><h4>路線④：本地小作品</h4>
+<p>本步驟不適用：本地小作品不部署、不排程，繼續用第 5 天的下載 JSON → 匯入方式；本課到此完成，請直接到第 27 天。日後想公開與自動更新，可以回來走①，先完成第 6 天 Pages 與公開內容檢查。</p>
+</div></div><h3 id="sec-4">範例提示詞</h3>
+<p>貼給 AI 前，先確認提供的程式與工作區沒有金鑰及私人檔案；網頁聊天請貼完整 HTML，代理則指定專案檔案。</p>
 <div class="code"><button class="copy" type="button">複製</button><pre><code class="language-text">請協助修改目前的單一 HTML 匯率換算器，
 讓 GitHub Actions 每天下載資料，GitHub Pages 只讀同站 rates.json。
-先檢查專案並提出修改計畫；我確認後才改檔。
+先依我提供的程式或專案提出修改計畫；我確認後才改檔。
+若是網頁聊天，請提供我要貼回的完整檔案，不要宣稱已改本機。
 不要自行 commit、push、改帳號設定或加入第三方服務。
 
 &lt;專案與資料條件&gt;
@@ -246,6 +264,7 @@ API 不需要金鑰，不必建立 Secrets。
 修改後再列出實際測試結果；未執行的測試必須寫「未測試」。
 不要把範例程式說成已實測成功。</code></pre></div>
 <h3 id="sec-5">驗收</h3>
+<p>以下適用①②③；④以本地 HTML 可用、能匯入 JSON 且保留版本副本驗收，不要求排程與通知。</p>
 <ul>
 <li class="check"> <strong>是／否：</strong>連續兩天都有 <code>schedule</code> 觸發且成功的紀錄，並核對 <code>rates.json</code> 最多七筆、由新到舊排列？</li>
 <li class="check"> <strong>是／否：</strong>Pages 網頁讀的是同站 <code>rates.json</code>，顯示資料日期，且 100 美元在範例匯率下得到 3,286 元新台幣？</li>
@@ -304,14 +323,15 @@ API 不需要金鑰，不必建立 Secrets。
 <li><strong>把金鑰藏在 HTML、公開 repo 或執行紀錄。</strong>這個 API 不需要金鑰；未來若需要，使用 Secrets，外洩仍須到發行服務撤銷重發。</li>
 <li><strong>把沒有新匯率當失敗，或完全不驗證通知。</strong>假日可能沒有新資料；失敗郵件也受通知設定影響，必須實際測一次。</li>
 </ul>
-</details><details><summary id="sec-7">官方連結</summary><p>以下文件網址均為附件記載於 <strong>2026-11-11</strong> 實際開啟；本次未上網複查。央行 API 則是題目提供於同日實測的網址。</p>
+</details><details><summary id="sec-7">官方連結</summary><p>資料日期：<strong>2026-11-11</strong>。沿用既有教材與 R4 調研記錄，本次未上網複查。</p>
 <ul>
-<li><a href="https://cpx.cbc.gov.tw/api/OpenData/FTDOpenData_Day" target="_blank" rel="noopener noreferrer">央行每日匯率 API</a><span class="dom">cpx.cbc.gov.tw</span>——題目提供實測日期：2026-11-11。</li>
-<li><a href="https://docs.github.com/en/actions/concepts/billing-and-usage" target="_blank" rel="noopener noreferrer">GitHub：Actions 計費與用量</a><span class="dom">docs.github.com</span></li>
-<li><a href="https://github.com/pricing" target="_blank" rel="noopener noreferrer">GitHub：方案價格</a><span class="dom">github.com</span></li>
-<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">GitHub：GitHub Pages 是什麼</a><span class="dom">docs.github.com</span></li>
-<li><a href="https://geminicli.com/docs/get-started/installation/" target="_blank" rel="noopener noreferrer">Gemini CLI：安裝需求</a><span class="dom">geminicli.com</span></li>
-<li><a href="https://geminicli.com/docs/resources/quota-and-pricing/" target="_blank" rel="noopener noreferrer">Gemini CLI：額度與方案</a><span class="dom">geminicli.com</span></li>
-<li>workflow 語法、Secrets、失敗通知及 Pages Actions 部署的專用文件連結：<strong>附件查無</strong>。</li>
+<li><a href="https://cpx.cbc.gov.tw/api/OpenData/FTDOpenData_Day" target="_blank" rel="noopener noreferrer">央行：日資料 API</a><span class="dom">cpx.cbc.gov.tw</span>。</li>
+<li><a href="https://docs.github.com/en/actions/get-started/quickstart" target="_blank" rel="noopener noreferrer">GitHub：網頁建立 workflow</a><span class="dom">docs.github.com</span>。</li>
+<li><a href="https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files" target="_blank" rel="noopener noreferrer">GitHub：網頁編輯與提交</a><span class="dom">docs.github.com</span>。</li>
+<li><a href="https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop" target="_blank" rel="noopener noreferrer">GitHub Desktop：比較、提交與推送</a><span class="dom">docs.github.com</span>。</li>
+<li><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule" target="_blank" rel="noopener noreferrer">GitHub：schedule 與限制</a><span class="dom">docs.github.com</span>。</li>
+<li><a href="https://docs.github.com/en/actions/tutorials/authenticate-with-github_token" target="_blank" rel="noopener noreferrer">GitHub：Token 權限</a><span class="dom">docs.github.com</span>。</li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" target="_blank" rel="noopener noreferrer">GitHub：Pages 來源與 Token 限制</a><span class="dom">docs.github.com</span>。</li>
+<li><a href="https://docs.github.com/en/actions/concepts/billing-and-usage" target="_blank" rel="noopener noreferrer">GitHub：公開 runner 與計費</a><span class="dom">docs.github.com</span>。</li>
 </ul>
 </details><nav class="pager" aria-label="前後課程"><a class="prev" href="day25.html"><span>← 前一天</span>第 25 天 聊天 AI 內建排程</a><a class="next" href="day27.html"><span>下一天 →</span>第 27 天 主動式 AI</a></nav></article></main><aside class="toc" aria-label="本頁目錄"><div class="t">本頁</div><a href="#sec-1">白話觀念卡</a><a href="#sec-2">示範工具</a><a href="#sec-3">步驟</a><a href="#sec-4">範例提示詞</a><a href="#sec-5">驗收</a><a href="#sec-6">常見錯誤</a><a href="#sec-7">官方連結</a></aside><nav class="bottombar" aria-label="前後課程"><a href="day25.html">← 第 25 天</a><a href="day27.html">第 27 天 →</a></nav></body></html>
