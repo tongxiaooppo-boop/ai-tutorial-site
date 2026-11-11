@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-Hant" data-pal="teal"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>第 19 天 程式代理｜28 天 AI 入門</title><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header class="topbar"><button type="button" aria-label="打開課表" aria-controls="schedule" aria-expanded="false">☰</button><span>第 19 天 程式代理</span></header><nav class="nav" id="schedule" aria-label="課表"><a class="brand" href="index.html">28 天 AI 入門</a><div class="stage">第 1 階段・當 Google 用</div><a class="day" href="day01.html"><b>1</b><span>白話認識 AI</span><span class="st">★</span></a><a class="day" href="day02.html"><b>2</b><span>問答與查證</span><span class="st">★</span></a><a class="day" href="day03.html"><b>3</b><span>資料保護</span><span class="st">★</span></a><div class="stage">第 2 階段・整理與分析</div><a class="day" href="day04.html"><b>4</b><span>摘要</span><span class="st">★</span></a><a class="day" href="day05.html"><b>5</b><span>寫作與潤稿</span><span class="st">★</span></a><a class="day" href="day06.html"><b>6</b><span>旅遊規劃</span><span class="st">★</span></a><a class="day" href="day07.html"><b>7</b><span>看懂合約與帳單</span><span class="st">★</span></a><a class="day" href="day08.html"><b>8</b><span>檢查報告與用藥問題</span><span class="st">★</span></a><a class="day" href="day09.html"><b>9</b><span>記帳、預算與比價</span></a><a class="day" href="day10.html"><b>10</b><span>試算表與資料分析</span><span class="st">★</span></a><a class="day" href="day11.html"><b>11</b><span>簡報</span></a><a class="day" href="day12.html"><b>12</b><span>繪圖</span></a><a class="day" href="day13.html"><b>13</b><span>會議紀錄、履歷、求職信</span></a><div class="stage">第 2 階段・技能</div><a class="day" href="day14.html"><b>14</b><span>哪些工作值得做成技能</span><span class="st">★</span></a><a class="day" href="day15.html"><b>15</b><span>Gemini 與 Claude 的技能工具</span></a><a class="day" href="day16.html"><b>16</b><span>技能實作與維護</span><span class="st">★</span></a><div class="stage">第 2 階段・Vibe Coding</div><a class="day" href="day17.html"><b>17</b><span>把想法寫成規格</span><span class="st">★</span></a><a class="day" href="day18.html"><b>18</b><span>VS Code、Git、GitHub</span><span class="st">★</span></a><a class="day cur" href="day19.html" aria-current="page"><b>19</b><span>程式代理</span><span class="st">★</span></a><a class="day" href="day20.html"><b>20</b><span>匯率換算器</span><span class="st">★</span></a><a class="day" href="day21.html"><b>21</b><span>API 入門</span><span class="st">★</span></a><a class="day" href="day22.html"><b>22</b><span>部署到 GitHub Pages</span><span class="st">★</span></a><a class="day" href="day23.html"><b>23</b><span>卡關處理</span></a><div class="stage">第 3 階段・代理與排程</div><a class="day" href="day24.html"><b>24</b><span>代理與權限</span><span class="st">★</span></a><a class="day" href="day25.html"><b>25</b><span>聊天 AI 內建排程</span></a><a class="day" href="day26.html"><b>26</b><span>每天自動抓匯率</span></a><div class="stage">第 4 階段・主動式 AI</div><a class="day" href="day27.html"><b>27</b><span>主動式 AI</span></a><div class="stage">回顧</div><a class="day" href="day28.html"><b>28</b><span>回顧與盤點</span></a></nav><button class="scrim" type="button" aria-label="關閉課表" tabindex="-1" hidden></button><main id="main"><article class="art"><div class="eyebrow">第 2 階段・Vibe Coding</div><h1>第 19 天｜程式代理</h1><div class="meta"><span class="tag star">★ 最低完成路線</span><span class="tag">先修：<a href="day18.html">第 18 天</a></span></div><p class="subtitle">第 3 天｜程式代理：安裝 Codex、Claude Code，完成第一次修改</p><h3 id="sec-1">白話觀念卡</h3>
+<p>聊天型 AI 通常把程式給你，再由你貼入檔案。程式代理則能在授權範圍內讀取專案、修改檔案、執行指令。方便的同時，也必須知道它開了哪個資料夾、取得哪些權限、改了什麼。</p>
+<p>擴充功能可以免費安裝，但服務可能需要付費資格。Codex 官方目前將 Free 的使用範圍列為逐步開放的桌面 App；不能保證免費帳號能用 VS Code 擴充功能。Claude Code 也不能直接用 Claude Free 聊天資格代替。</p>
+<h3 id="sec-2">示範工具</h3>
+<ul>
+<li><strong>免費主線：Gemini 免費版。</strong>協助寫出第一次修改內容，由學員自行貼入 VS Code，可繼續完成全週作品。</li>
+<li><strong>ChatGPT／Codex：</strong>今天認識 Codex 官方擴充功能；使用 IDE 需核對方案與帳號權限，Free 桌面資格不等於 IDE 資格。</li>
+<li><strong>Claude／Claude Code：</strong>官方擴充功能支援符合資格的付費 Claude 訂閱或 Console 帳號；Console 使用可能產生 API 費用。</li>
+</ul>
+<p><strong>課堂安排：</strong>有符合資格帳號的學員實作代理；其餘學員觀看老師示範，再走免費主線。今天不必為了繼續課程輸入信用卡。</p>
+<h3 id="sec-3">步驟</h3>
+<ol>
+<li><strong>打開 VS Code 的 <code>fx-practice</code>。</strong>先執行 <code>git status</code>，確認昨天的規格已儲存成 commit。</li>
+<li><strong>安裝 Codex。</strong>按 <code>Ctrl＋Shift＋X</code> 開啟 Extensions，搜尋 Codex，核對發行者為 OpenAI、識別碼為 <code>openai.chatgpt</code>。安裝後點 Codex 圖示；找不到時用命令選擇區搜尋 <code>Codex: Open Codex Sidebar</code>。</li>
+<li><strong>完成 Codex 登入與資格檢查。</strong>依官方登入流程操作。若顯示方案不支援，記下訊息並走免費主線。Windows 依目前官方流程設定沙盒，不因舊文章而先安裝 WSL。</li>
+<li><strong>認識 Claude Code 的安裝。</strong>在 Extensions 搜尋 Claude Code，核對發行者 Anthropic、識別碼 <code>anthropic.claude-code</code>。安裝後開啟面板、點 Sign in，在瀏覽器完成授權。擴充功能已包含面板所需 CLI，不必先額外安裝終端機版。</li>
+<li><strong>只選一個入口做第一次修改。</strong>代理先用唯讀／Plan 了解專案；Claude Code 修改練習可選 Manual，逐次檢查提議。請它只在 <code>README.md</code> 加一行「版本：第 3 天練習」。免費主線則請 Gemini 產生那一行，自己貼入。</li>
+<li><strong>核對結果並存檔。</strong>查看 <code>git diff -- README.md</code>，確認只有預期文字變動，再提交這次修改。</li>
+</ol>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-powershell">git diff -- README.md
+git add README.md
+git commit -m &quot;加入課堂版本標示&quot;</code></pre></div>
+<p>不要同時讓兩個代理修改同一份檔案。</p>
+<h3 id="sec-4">範例提示詞</h3>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-text">請協助我完成第一次小修改，先確認範圍，再處理。
+
+&lt;專案資料&gt;
+目前專案：fx-practice。
+目標檔案：README.md。
+需求：在文件最後新增一行「版本：第3天練習」。
+其他內容不需要調整。
+這是入門練習，不需要套件、網路連線或系統設定變更。
+&lt;/專案資料&gt;
+
+請先回答：
+1. 你要讀取哪個檔案？
+2. 預計修改哪個位置？
+3. 我要怎麼確認只有這項修改？
+
+若你具有本機修改能力，依目前權限模式提出或完成這項修改，
+最後列出實際修改檔案與檢查方式。
+若你只是聊天工具，請直接提供我要貼上的那一行，
+不要說已經修改我的電腦檔案。</code></pre></div>
+<h3 id="sec-5">驗收</h3>
+<ul>
+<li>是／否：安裝前有核對官方發行者與擴充功能識別碼？</li>
+<li>是／否：知道自己的帳號是否有 IDE 代理使用資格？</li>
+<li>是／否：實際 diff 只有指定的版本標示？</li>
+</ul>
+<p><strong>正常範例</strong></p>
+<p>輸入：要求在 <code>README.md</code> 最後加入版本標示。<br>預期：只有這份檔案增加一行；聊天工具則只提供文字，沒有宣稱已修改本機。</p>
+<p><strong>失敗範例</strong></p>
+<p>輸出：「環境已最佳化」，同時新增多個設定檔、修改系統設定。</p>
+<p>辨識方式：這些變更與指定的一行文字無關。停止後續操作，逐檔檢查，不要整批接受。</p>
+<details><summary id="sec-6">常見錯誤</summary><ul>
+<li>以為裝好擴充功能就取得免費模型額度。</li>
+<li>把 VS Code 內建代理選單與另外安裝的官方擴充功能混在一起。</li>
+<li>以為代理每個動作都會詢問；自動模式可能直接修改工作區檔案。</li>
+<li>為了省事選擇完整存取、Bypass，卻不知道開放了哪些範圍。</li>
+<li>把專案中的秘密檔案開在編輯器，誤以為 <code>.gitignore</code> 也會禁止 AI 讀取。</li>
+</ul>
+</details><details><summary id="sec-7">官方連結</summary><p>查詢日期：<strong>2026-11-11</strong>。</p>
+<ul>
+<li><a href="https://learn.chatgpt.com/docs/codex/ide.md" target="_blank" rel="noopener noreferrer">OpenAI：Codex IDE 擴充功能入門</a><span class="dom">learn.chatgpt.com</span>。</li>
+<li><a href="https://learn.chatgpt.com/docs/pricing.md" target="_blank" rel="noopener noreferrer">OpenAI：方案與使用範圍</a><span class="dom">learn.chatgpt.com</span>。</li>
+<li><a href="https://learn.chatgpt.com/docs/windows/windows-sandbox.md" target="_blank" rel="noopener noreferrer">OpenAI：Windows 沙盒</a><span class="dom">learn.chatgpt.com</span>。</li>
+<li><a href="https://learn.chatgpt.com/docs/agent-approvals-security.md" target="_blank" rel="noopener noreferrer">OpenAI：代理權限與安全</a><span class="dom">learn.chatgpt.com</span>。</li>
+<li><a href="https://code.claude.com/docs/en/vs-code" target="_blank" rel="noopener noreferrer">Anthropic：Claude Code 的 VS Code 安裝、登入與修改檢視</a><span class="dom">code.claude.com</span>。</li>
+</ul>
+</details><nav class="pager" aria-label="前後課程"><a class="prev" href="day18.html"><span>← 前一天</span>第 18 天 VS Code、Git、GitHub</a><a class="next" href="day20.html"><span>下一天 →</span>第 20 天 匯率換算器</a></nav></article></main><aside class="toc" aria-label="本頁目錄"><div class="t">本頁</div><a href="#sec-1">白話觀念卡</a><a href="#sec-2">示範工具</a><a href="#sec-3">步驟</a><a href="#sec-4">範例提示詞</a><a href="#sec-5">驗收</a><a href="#sec-6">常見錯誤</a><a href="#sec-7">官方連結</a></aside><nav class="bottombar" aria-label="前後課程"><a href="day18.html">← 第 18 天</a><a href="day20.html">第 20 天 →</a></nav></body></html>

@@ -1,0 +1,105 @@
+<!doctype html><html lang="zh-Hant" data-pal="teal"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>第 21 天 API 入門｜28 天 AI 入門</title><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header class="topbar"><button type="button" aria-label="打開課表" aria-controls="schedule" aria-expanded="false">☰</button><span>第 21 天 API 入門</span></header><nav class="nav" id="schedule" aria-label="課表"><a class="brand" href="index.html">28 天 AI 入門</a><div class="stage">第 1 階段・當 Google 用</div><a class="day" href="day01.html"><b>1</b><span>白話認識 AI</span><span class="st">★</span></a><a class="day" href="day02.html"><b>2</b><span>問答與查證</span><span class="st">★</span></a><a class="day" href="day03.html"><b>3</b><span>資料保護</span><span class="st">★</span></a><div class="stage">第 2 階段・整理與分析</div><a class="day" href="day04.html"><b>4</b><span>摘要</span><span class="st">★</span></a><a class="day" href="day05.html"><b>5</b><span>寫作與潤稿</span><span class="st">★</span></a><a class="day" href="day06.html"><b>6</b><span>旅遊規劃</span><span class="st">★</span></a><a class="day" href="day07.html"><b>7</b><span>看懂合約與帳單</span><span class="st">★</span></a><a class="day" href="day08.html"><b>8</b><span>檢查報告與用藥問題</span><span class="st">★</span></a><a class="day" href="day09.html"><b>9</b><span>記帳、預算與比價</span></a><a class="day" href="day10.html"><b>10</b><span>試算表與資料分析</span><span class="st">★</span></a><a class="day" href="day11.html"><b>11</b><span>簡報</span></a><a class="day" href="day12.html"><b>12</b><span>繪圖</span></a><a class="day" href="day13.html"><b>13</b><span>會議紀錄、履歷、求職信</span></a><div class="stage">第 2 階段・技能</div><a class="day" href="day14.html"><b>14</b><span>哪些工作值得做成技能</span><span class="st">★</span></a><a class="day" href="day15.html"><b>15</b><span>Gemini 與 Claude 的技能工具</span></a><a class="day" href="day16.html"><b>16</b><span>技能實作與維護</span><span class="st">★</span></a><div class="stage">第 2 階段・Vibe Coding</div><a class="day" href="day17.html"><b>17</b><span>把想法寫成規格</span><span class="st">★</span></a><a class="day" href="day18.html"><b>18</b><span>VS Code、Git、GitHub</span><span class="st">★</span></a><a class="day" href="day19.html"><b>19</b><span>程式代理</span><span class="st">★</span></a><a class="day" href="day20.html"><b>20</b><span>匯率換算器</span><span class="st">★</span></a><a class="day cur" href="day21.html" aria-current="page"><b>21</b><span>API 入門</span><span class="st">★</span></a><a class="day" href="day22.html"><b>22</b><span>部署到 GitHub Pages</span><span class="st">★</span></a><a class="day" href="day23.html"><b>23</b><span>卡關處理</span></a><div class="stage">第 3 階段・代理與排程</div><a class="day" href="day24.html"><b>24</b><span>代理與權限</span><span class="st">★</span></a><a class="day" href="day25.html"><b>25</b><span>聊天 AI 內建排程</span></a><a class="day" href="day26.html"><b>26</b><span>每天自動抓匯率</span></a><div class="stage">第 4 階段・主動式 AI</div><a class="day" href="day27.html"><b>27</b><span>主動式 AI</span></a><div class="stage">回顧</div><a class="day" href="day28.html"><b>28</b><span>回顧與盤點</span></a></nav><button class="scrim" type="button" aria-label="關閉課表" tabindex="-1" hidden></button><main id="main"><article class="art"><div class="eyebrow">第 2 階段・Vibe Coding｜週日</div><h1>第 21 天｜API 入門</h1><div class="meta"><span class="tag star">★ 最低完成路線</span><span class="tag">先修：<a href="day20.html">第 20 天</a></span></div><p class="subtitle">第 5 天｜API 入門：讀取官方匯率，保護金鑰</p><h3 id="sec-1">白話觀念卡</h3>
+<p>API 是讓程式依約定向另一個服務索取資料的入口。程式送出請求，服務回傳資料；JSON 是常見的資料格式。呼叫 API 不一定要用 AI，也不一定需要金鑰。</p>
+<p>今天採用中央銀行公布的美元對新臺幣銀行間收盤資料。它與台銀現金、即期買賣牌告不同，不能當成臨櫃成交價。</p>
+<p>有些 API 需要像密碼一樣保管的金鑰。<code>.env</code> 可用來放本機設定，但不會自動加密，也不能讓網頁前端藏住秘密。本課公開資料不需要另外申請 AI API 金鑰。</p>
+<h3 id="sec-2">示範工具</h3>
+<ul>
+<li><strong>首選：Gemini 免費版。</strong>可協助解釋少量 JSON、依實際欄位產生讀取程式；資料本身由官方 API 提供。</li>
+<li><strong>ChatGPT：</strong>同樣可解釋 API 回應與修改解析程式；ChatGPT 免費聊天不能推定為免費 AI API。</li>
+<li><strong>Claude：</strong>適合逐段解釋資料解析與錯誤處理；Claude 聊天、Claude Code、Claude API 分別核對資格與費用。</li>
+</ul>
+<p><strong>今天使用的資料</strong></p>
+<p>採用<a href="https://data.gov.tw/dataset/7232" target="_blank" rel="noopener noreferrer">政府資料開放平臺第 7232 號資料集</a><span class="dom">data.gov.tw</span>所列的<a href="https://cpx.cbc.gov.tw/api/OpenData/FTDOpenData_Day" target="_blank" rel="noopener noreferrer">中央銀行日資料 API</a><span class="dom">cpx.cbc.gov.tw</span>。官方資料集列為免費，欄位說明包含日期、<code>NTD/USD</code>。</p>
+<p>台銀牌告已先查閱，但這堂課選用有明確公開 API 入口的央行資料。</p>
+<p><strong>備課實測（2026-11-11）</strong>：回應是一個陣列，每筆長這樣 <code>{&quot;日期&quot;:&quot;20261111&quot;,&quot;NTD_USD&quot;:&quot;32.86&quot;}</code>，從 2008 年起逐日累積，全檔約 190 KB；日期是 <code>YYYYMMDD</code> 字串、匯率是字串，要轉成數字。伺服器只允許 <code>petstore.swagger.io</code> 跨來源讀取，<strong>放在 GitHub Pages 的網頁用 <code>fetch</code> 直接抓會被瀏覽器擋（CORS）</strong>，所以本課採「先下載、再匯入」；第 26 天改由 GitHub Actions 每天下載。上課時仍以學員自己下載到的實際回應為準。</p>
+<h3 id="sec-3">步驟</h3>
+<ol>
+<li><strong>打開瀏覽器讀官方資料說明。</strong>辨認資料是「銀行間收盤匯率」，理解 <code>NTD/USD</code> 代表每 1 美元對應的新臺幣數值。今天的成品保留美元轉新臺幣。</li>
+<li><strong>用 Windows PowerShell 取得 API 回應。</strong>在 VS Code 開啟 <code>fx-practice</code> 的終端機，執行下方指令，下載為 <code>rates-response.json</code>。這是程式發出的資料請求，不是在執行網頁程式。</li>
+<li><strong>查看實際資料，再請 AI 解釋。</strong>用 VS Code 開啟下載檔，提供頂層結構及少量完整紀錄給 AI。要求指出資料清單在哪、日期與匯率欄位在哪；若回來的是錯誤頁或空內容，先停在這一步。</li>
+<li><strong>修改單一 HTML，加入「選擇匯率資料檔」。</strong>讓網頁讀取剛下載的 JSON，依已確認欄位找出日期最新、匯率有效的紀錄；顯示來源、資料日期及匯率。檔案在瀏覽器本機解析，不上傳。原本固定值保留為明確標示的「練習模式」。</li>
+<li><strong>了解瀏覽器直接抓資料的差異。</strong>備課實測：央行 API 不允許一般網站跨來源讀取，網頁直接 <code>fetch</code> 會在瀏覽器主控台出現 CORS 錯誤。可以加做一個「向官方更新」按鈕親眼看這個錯誤，然後回到本課的下載後匯入路線。不要關閉瀏覽器安全功能，也不要接陌生的免費轉送服務。</li>
+<li><strong>做金鑰保護練習，再建立存檔點。</strong>只用下面的假金鑰建立 <code>.env</code>，加入 <code>.gitignore</code> 並驗證它未被追蹤；公開作品只使用免金鑰資料。資料模式與練習模式都測完後再 commit。</li>
+</ol>
+<p>第 2 步，在專案終端機執行：</p>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-powershell">Invoke-WebRequest -Uri &quot;https://cpx.cbc.gov.tw/api/OpenData/FTDOpenData_Day&quot; -OutFile &quot;.\rates-response.json&quot;</code></pre></div>
+<p>若下載失敗，保留完整錯誤文字，依第 7 天格式詢問 AI。不要以自己編的 JSON 冒充成功回應。</p>
+<p>第 6 步，<code>.env</code> 只放假值：</p>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-dotenv">EXCHANGE_API_KEY=DEMO_ONLY_NOT_A_REAL_KEY</code></pre></div>
+<p><code>.gitignore</code> 加入：</p>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-gitignore">.env
+.env.*
+!.env.example</code></pre></div>
+<p>可分享的 <code>.env.example</code> 只留空欄位：</p>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-dotenv">EXCHANGE_API_KEY=</code></pre></div>
+<p>確認忽略規則與追蹤狀態：</p>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-powershell">git check-ignore .env
+git ls-files .env</code></pre></div>
+<p>預期第一個指令顯示 <code>.env</code>，第二個沒有輸出。</p>
+<p><strong>要記住的界線：</strong>如果將來改用需要秘密金鑰的服務，要由後端程式讀取環境變數並代為呼叫。GitHub Pages 沒有這種後端執行環境；不要把 <code>.env</code> 讀進 HTML，也不要把秘密金鑰塞進前端建置結果。</p>
+<h3 id="sec-4">範例提示詞</h3>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-text">請協助我把既有單一HTML匯率換算器，加入官方資料檔匯入功能。
+先確認實際資料結構，再寫解析程式。
+
+&lt;作品現況&gt;
+檔案：index.html。
+原功能：USD轉TWD，固定練習值1 USD＝32 TWD。
+接下來要支援：選擇一份本機JSON檔，讀取官方匯率資料。
+網頁維持單一HTML，不使用框架、不上傳檔案內容。
+&lt;/作品現況&gt;
+
+&lt;資料來源說明&gt;
+提供機關：中央銀行。
+內容：銀行間市場新臺幣對美元收盤匯率日資料。
+官方資料集說明的欄位：日期、NTD/USD。
+這不是銀行現金或即期買賣牌告，也不是即時交易報價。
+&lt;/資料來源說明&gt;
+
+&lt;API實際回應&gt;
+【貼上剛下載JSON的頂層結構與少量完整紀錄，保留原始欄名。
+尚未取得資料時，請保留這段並讓AI先指出資料不足。】
+&lt;/API實際回應&gt;
+
+&lt;既有程式&gt;
+【貼上目前完整index.html；程式代理則指定它讀取該檔案】
+&lt;/既有程式&gt;
+
+請先輸出：
+1. 實際JSON的資料路徑、日期欄位與匯率欄位對照表。
+2. 如何判斷最新日期，不能假設第一筆或最後一筆一定最新。
+3. 資料不足或格式不符時，還需要我提供什麼。
+
+欄位能確認後，再提供完整index.html或可檢查的修改。
+要求：
+- 匯率必須是大於0的有限數字；缺值不能當0。
+- 顯示來源、資料日期、單位與換算方向。
+- 匯入失敗要說明原因，不能偷偷改用32並標成官方資料。
+- 練習模式必須清楚標示。
+- 不讀取.env、不要求任何金鑰、不增加換匯建議。
+最後附正常、空檔、欄位缺漏、錯誤格式的測試方式。</code></pre></div>
+<h3 id="sec-5">驗收</h3>
+<ul>
+<li>是／否：真的向官方 API 發出請求，並檢查取得的檔案內容？</li>
+<li>是／否：頁面顯示資料日期與來源，能分清官方資料模式、練習模式？</li>
+<li>是／否：<code>.env</code> 被忽略且未被 Git 追蹤，HTML 裡沒有秘密金鑰？</li>
+</ul>
+<p><strong>正常範例</strong></p>
+<p>輸入：測試用的標準化資料為「日期已確認、<code>rate＝32</code>、方向為 TWD／USD」，金額為 <code>100 USD</code>。這組 <code>32</code> 是測試值，不冒充 API 現值。<br>預期：<code>3,200.00 TWD</code>；使用真實官方資料時，則以同日期原始數值乘以 100，人工核對結果。</p>
+<p><strong>失敗範例</strong></p>
+<p>輸出：「今天最新台銀即時匯率：32」，但剛剛的 API 請求失敗。</p>
+<p>辨識方式：來源、資料性質與成功狀態都不一致。程式應顯示讀取失敗，或由使用者明確切換到練習模式。</p>
+<details><summary id="sec-6">常見錯誤</summary><ul>
+<li>把央行銀行間收盤資料標成台銀現金賣出價，或拿它判斷何時換錢。</li>
+<li>看見 API 網址能在瀏覽器開啟，就以為任何網頁都能用 <code>fetch</code> 讀取。</li>
+<li>沒看實際資料，直接猜 JSON 欄位或把空字串轉成零。</li>
+<li>以為 <code>.env</code>、<code>.gitignore</code>、登入畫面能保護送到瀏覽器的秘密金鑰。</li>
+<li>金鑰已外洩，只刪檔案卻不撤銷；應先到服務官方撤銷或更換，歷史紀錄另行處理。</li>
+</ul>
+</details><details><summary id="sec-7">官方連結</summary><p>查詢日期：<strong>2026-11-11</strong>。</p>
+<ul>
+<li><a href="https://data.gov.tw/dataset/7232" target="_blank" rel="noopener noreferrer">政府資料開放平臺：銀行間市場新臺幣對美元收盤匯率</a><span class="dom">data.gov.tw</span>。</li>
+<li><a href="https://cpx.cbc.gov.tw/api/OpenData/FTDOpenData_Day" target="_blank" rel="noopener noreferrer">中央銀行：日資料 API</a><span class="dom">cpx.cbc.gov.tw</span>。</li>
+<li><a href="https://www.cbc.gov.tw/tw/lp-645-1.html" target="_blank" rel="noopener noreferrer">中央銀行：收盤匯率查詢與發布時間說明</a><span class="dom">www.cbc.gov.tw</span>。</li>
+<li><a href="https://aistudio.google.com/docs/api-key" target="_blank" rel="noopener noreferrer">Google：Gemini API 金鑰管理與安全</a><span class="dom">aistudio.google.com</span>。這是金鑰觀念延伸，本課不用申請。</li>
+</ul>
+</details><nav class="pager" aria-label="前後課程"><a class="prev" href="day20.html"><span>← 前一天</span>第 20 天 匯率換算器</a><a class="next" href="day22.html"><span>下一天 →</span>第 22 天 部署到 GitHub Pages</a></nav></article></main><aside class="toc" aria-label="本頁目錄"><div class="t">本頁</div><a href="#sec-1">白話觀念卡</a><a href="#sec-2">示範工具</a><a href="#sec-3">步驟</a><a href="#sec-4">範例提示詞</a><a href="#sec-5">驗收</a><a href="#sec-6">常見錯誤</a><a href="#sec-7">官方連結</a></aside><nav class="bottombar" aria-label="前後課程"><a href="day20.html">← 第 20 天</a><a href="day22.html">第 22 天 →</a></nav></body></html>

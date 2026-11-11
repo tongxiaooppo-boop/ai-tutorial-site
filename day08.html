@@ -1,0 +1,138 @@
+<!doctype html><html lang="zh-Hant" data-pal="teal"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>第 8 天 檢查報告與用藥問題｜28 天 AI 入門</title><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js" defer></script></head><body><a class="skip" href="#main">跳到正文</a><header class="topbar"><button type="button" aria-label="打開課表" aria-controls="schedule" aria-expanded="false">☰</button><span>第 8 天 檢查報告與用藥問題</span></header><nav class="nav" id="schedule" aria-label="課表"><a class="brand" href="index.html">28 天 AI 入門</a><div class="stage">第 1 階段・當 Google 用</div><a class="day" href="day01.html"><b>1</b><span>白話認識 AI</span><span class="st">★</span></a><a class="day" href="day02.html"><b>2</b><span>問答與查證</span><span class="st">★</span></a><a class="day" href="day03.html"><b>3</b><span>資料保護</span><span class="st">★</span></a><div class="stage">第 2 階段・整理與分析</div><a class="day" href="day04.html"><b>4</b><span>摘要</span><span class="st">★</span></a><a class="day" href="day05.html"><b>5</b><span>寫作與潤稿</span><span class="st">★</span></a><a class="day" href="day06.html"><b>6</b><span>旅遊規劃</span><span class="st">★</span></a><a class="day" href="day07.html"><b>7</b><span>看懂合約與帳單</span><span class="st">★</span></a><a class="day cur" href="day08.html" aria-current="page"><b>8</b><span>檢查報告與用藥問題</span><span class="st">★</span></a><a class="day" href="day09.html"><b>9</b><span>記帳、預算與比價</span></a><a class="day" href="day10.html"><b>10</b><span>試算表與資料分析</span><span class="st">★</span></a><a class="day" href="day11.html"><b>11</b><span>簡報</span></a><a class="day" href="day12.html"><b>12</b><span>繪圖</span></a><a class="day" href="day13.html"><b>13</b><span>會議紀錄、履歷、求職信</span></a><div class="stage">第 2 階段・技能</div><a class="day" href="day14.html"><b>14</b><span>哪些工作值得做成技能</span><span class="st">★</span></a><a class="day" href="day15.html"><b>15</b><span>Gemini 與 Claude 的技能工具</span></a><a class="day" href="day16.html"><b>16</b><span>技能實作與維護</span><span class="st">★</span></a><div class="stage">第 2 階段・Vibe Coding</div><a class="day" href="day17.html"><b>17</b><span>把想法寫成規格</span><span class="st">★</span></a><a class="day" href="day18.html"><b>18</b><span>VS Code、Git、GitHub</span><span class="st">★</span></a><a class="day" href="day19.html"><b>19</b><span>程式代理</span><span class="st">★</span></a><a class="day" href="day20.html"><b>20</b><span>匯率換算器</span><span class="st">★</span></a><a class="day" href="day21.html"><b>21</b><span>API 入門</span><span class="st">★</span></a><a class="day" href="day22.html"><b>22</b><span>部署到 GitHub Pages</span><span class="st">★</span></a><a class="day" href="day23.html"><b>23</b><span>卡關處理</span></a><div class="stage">第 3 階段・代理與排程</div><a class="day" href="day24.html"><b>24</b><span>代理與權限</span><span class="st">★</span></a><a class="day" href="day25.html"><b>25</b><span>聊天 AI 內建排程</span></a><a class="day" href="day26.html"><b>26</b><span>每天自動抓匯率</span></a><div class="stage">第 4 階段・主動式 AI</div><a class="day" href="day27.html"><b>27</b><span>主動式 AI</span></a><div class="stage">回顧</div><a class="day" href="day28.html"><b>28</b><span>回顧與盤點</span></a></nav><button class="scrim" type="button" aria-label="關閉課表" tabindex="-1" hidden></button><main id="main"><article class="art"><div class="eyebrow">第 2 階段・整理與分析</div><h1>第 8 天｜檢查報告與用藥問題</h1><div class="meta"><span class="tag star">★ 最低完成路線</span><span class="tag">先修：<a href="day01.html">第 1–3 天</a></span></div><section><h2 class="part" id="part1">看懂檢查報告用語：只做白話整理，不做診斷</h2><h3 id="sec-1">白話觀念卡</h3>
+<p>報告上的數字必須連同檢驗名稱、單位與該份報告的參考區間一起看，不能只截一個紅字就請 AI 判斷疾病。AI 能協助解釋用語、整理缺少的資料與回診問題，但不能替醫師判讀你的個人健康狀況。<strong>先確認抄對，再問意思；個人意義交給醫師。</strong> 本課不做 CT、X 光等醫療影像判讀。</p>
+<h3 id="sec-2">示範工具</h3>
+<ul>
+<li><strong>主示範：ChatGPT 免費版的一般聊天。</strong> 可先貼少量文字整理用語，不需要連結健康資料，也不用上傳整份病歷。</li>
+<li><strong>Claude：</strong>可整理文字、照片或文件，但圖片辨讀與長文件仍可能遺漏。</li>
+<li><strong>Gemini：</strong>可整理報告片段；檔案上傳能力不代表具備經驗證的診斷能力。</li>
+</ul>
+<h3 id="sec-3">步驟</h3>
+<ol>
+<li>打開 <strong>ChatGPT App 的一般聊天</strong>，不用尋找台灣帳號未確認可用的健康資料連結入口。</li>
+<li>從報告複製需要理解的小段，保留檢驗名稱、數值、單位、原報告參考區間與日期。</li>
+<li>移除姓名、生日、病歷號、條碼與 QR Code；照片要確認沒有其他人的資料。</li>
+<li>先請 AI 原樣列出資料，人工核對每個數字、單位與欄位是否配對正確。</li>
+<li>再請它解釋用語、列出不能判斷的事與回診問題，不推論疾病或治療。</li>
+<li>帶完整原報告回診，向醫師確認個人意義；若有急迫症狀，不要等待聊天解讀才求助。</li>
+</ol>
+<h3 id="sec-4">範例提示詞</h3>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-text">請協助我理解檢查報告文字並準備回診問題，不做診斷或治療建議。
+
+&lt;報告摘錄&gt;
+檢驗項目：〔貼上原文〕
+原始數值：〔貼上原文〕
+單位：〔貼上原文〕
+本報告的參考區間：〔貼上原文；沒有就寫未提供〕
+檢查日期：〔貼上日期〕
+院所文字說明：〔貼上原文；沒有就寫未提供〕
+&lt;/報告摘錄&gt;
+
+請先原樣列出你讀到的檢驗項目、數值、單位及參考區間，
+讓我核對。看不清楚或沒有提供的部分，不要猜。
+
+接著用「原文用語／白話意思／單靠這項資料無法判斷的事」
+表格回答，最後列出五項可問醫師的問題。
+
+不要自行加入網路通用參考值，不要推論疾病，
+也不要建議用藥、停藥或其他治療。</code></pre></div>
+<h3 id="sec-5">驗收</h3>
+<ul>
+<li class="check"> <strong>是／否：</strong>檢驗名稱、數值、單位與參考區間是否與原報告一致？</li>
+<li class="check"> <strong>是／否：</strong>缺少的資料是否保留為未知，沒有自行填入正常值？</li>
+<li class="check"> <strong>是／否：</strong>回答是否停留在詞義與回診問題，沒有下診斷？</li>
+</ul>
+<p><strong>正常範例</strong></p>
+<ul>
+<li><strong>輸入：</strong>「我只有報告中的檢驗名稱，尚未提供數值、單位及參考區間。」</li>
+<li><strong>預期結果：</strong>先要求補上原報告資料；即使解釋名詞，也明確表示不能據此判斷個人狀況。</li>
+</ul>
+<p><strong>失敗範例</strong></p>
+<ul>
+<li><strong>錯誤輸出：</strong>「這個紅字代表你已經得了某種疾病，開始吃藥就好。」</li>
+<li><strong>怎麼看出來：</strong>從單項或不完整資訊直接推論疾病，甚至提出治療，已超出本課範圍。</li>
+</ul>
+<details><summary id="sec-6">常見錯誤</summary><ol>
+<li>用網路找到的通用區間，取代原報告的參考區間。</li>
+<li>照片歪斜或小字模糊，AI 把鄰欄數字配到錯誤項目。</li>
+<li>只看「偏高、偏低」，沒核對單位與日期。</li>
+<li>上傳完整可識別病歷，或把其他家人的資料一起拍進去。</li>
+<li>把 AI 的安慰或警告當成診斷，延誤必要的醫療協助。</li>
+</ol>
+</details><details><summary id="sec-7">官方連結</summary><p>以下查詢日期均為 <strong>2026-11-11（附件紀錄）</strong>。</p>
+<ul>
+<li><a href="https://help.openai.com/zh-hant/articles/20001036-health-in-chatgpt" target="_blank" rel="noopener noreferrer">OpenAI：健康用途與非診斷界線</a><span class="dom">help.openai.com</span> — 附件記錄健康資料連結功能有地區條件，不能當作台灣既定入口。</li>
+<li><a href="https://help.openai.com/en/articles/8400551-chatgpt-image-inputs-faq" target="_blank" rel="noopener noreferrer">ChatGPT 圖片輸入限制</a><span class="dom">help.openai.com</span></li>
+<li>個別檢驗項目及檢查院所的官方衛教頁面：<strong>查無</strong>。</li>
+</ul>
+</details></section>
+<section><h2 class="part" id="part2">用藥問題整理：問藥師前的準備</h2><h3 id="sec-8">白話觀念卡</h3>
+<p>問「這兩種能不能一起吃」之前，通常要先把所有用藥整理完整，包括處方藥、成藥、中草藥、保健食品與過敏史。AI 可以幫你製作清單、讀懂仿單文字、找出缺少的欄位，但不是可靠的交互作用檢核系統。<strong>「沒有查到」不等於「沒有交互作用」。</strong> 能否併用、是否要調整服藥，交給藥師與醫師確認。</p>
+<h3 id="sec-9">示範工具</h3>
+<ul>
+<li><strong>主示範：ChatGPT 免費版。</strong> 可用文字清單配合少量藥袋或仿單摘錄，完成諮詢前整理，不必開啟任何付款或醫療系統權限。</li>
+<li><strong>Claude：</strong>可整理多份文件與照片，但仍須逐項核對商品名、成分與含量。</li>
+<li><strong>Gemini：</strong>也能整理照片及仿單片段；同一提示可放多個檔案，不代表已完成專業交互作用檢核。</li>
+</ul>
+<h3 id="sec-10">步驟</h3>
+<ol>
+<li>打開 <strong>瀏覽器</strong>，進入食藥署藥品仿單查詢平台，依藥袋的品名或許可證字號找對應資料。</li>
+<li>列出所有處方藥、成藥、中草藥、保健食品與過敏史，包含按需要才使用的項目。</li>
+<li>打開 <strong>ChatGPT App</strong>，新增聊天，貼上去識別化清單及對應仿單段落。</li>
+<li>要求只整理成分、含量、劑型、用法資料與待問問題，不判斷能否併用。</li>
+<li>對照原藥袋、藥盒與仿單，確認商品名、成分、含量、劑型、頻次及版本是否一致。</li>
+<li>帶原藥袋、藥盒及問題清單詢問藥師；不依 AI 回答自行停藥、換藥、改劑量或錯開時間。</li>
+</ol>
+<h3 id="sec-11">範例提示詞</h3>
+<div class="code"><button class="copy" type="button">複製</button><pre><code class="language-text">請協助我準備藥師諮詢清單，不判定能否併用，
+也不要建議停藥、換藥、改劑量或自行錯開服藥時間。
+
+&lt;用藥資料&gt;
+處方藥：〔逐項貼上商品名、成分、含量、劑型、每次用量、每日頻次〕
+成藥及按需使用藥品：〔填寫；不清楚寫未知〕
+中草藥與保健食品：〔填寫；不清楚寫未知〕
+使用原因：〔填寫必要資訊〕
+過敏史：〔填寫；不清楚寫未知〕
+&lt;/用藥資料&gt;
+
+&lt;對應仿單摘錄&gt;
+〔貼上食藥署平台找到的對應段落；未取得就寫尚未提供〕
+&lt;/對應仿單摘錄&gt;
+
+請輸出：
+1.「項目／已提供資料／缺少資料／需要人工核對的地方」表格。
+2. 五項要問藥師的問題。
+
+若品名、成分、含量或劑型不清楚，先請我補資料，不要猜。
+仿單未提供就提醒我取得對應版本。
+沒有找到交互作用資料，只能寫「未確認」，不能寫「沒有交互作用」。</code></pre></div>
+<h3 id="sec-12">驗收</h3>
+<ul>
+<li class="check"> <strong>是／否：</strong>是否包含成藥、保健食品、中草藥與按需使用項目？</li>
+<li class="check"> <strong>是／否：</strong>商品名、成分、含量與劑型是否已逐項對照原包裝？</li>
+<li class="check"> <strong>是／否：</strong>AI 是否只列資料缺口與諮詢問題，沒有判定安全或更改服法？</li>
+</ul>
+<p><strong>正常範例</strong></p>
+<ul>
+<li><strong>輸入：</strong>「目前只有商品名，成分、含量與仿單尚未提供。」</li>
+<li><strong>預期結果：</strong>要求補上藥袋或藥盒資料，提供待填清單，交互作用狀態寫「未確認」。</li>
+</ul>
+<p><strong>失敗範例</strong></p>
+<ul>
+<li><strong>錯誤輸出：</strong>「資料沒有寫交互作用，所以可以一起吃；不放心就自行間隔兩小時。」</li>
+<li><strong>怎麼看出來：</strong>把資料缺口當成安全證明，並擅自改變服藥安排。</li>
+</ul>
+<details><summary id="sec-13">常見錯誤</summary><ol>
+<li>只列兩種藥，漏掉其他院所處方、感冒成藥或保健食品。</li>
+<li>AI 依台灣商品名猜錯成分，或漏掉複方中的其他成分。</li>
+<li>使用不同含量、劑型或給藥途徑的資料，誤以為是同一份仿單。</li>
+<li>藥袋照片露出姓名、生日、病歷號與條碼。</li>
+<li>把 AI 的清單當成藥師已檢核，據此自行停藥或調整服法。</li>
+</ol>
+</details><details><summary id="sec-14">官方連結</summary><p>以下查詢日期均為 <strong>2026-11-11（附件紀錄）</strong>。</p>
+<ul>
+<li><a href="https://mcp.fda.gov.tw/" target="_blank" rel="noopener noreferrer">食藥署藥品仿單查詢平台</a><span class="dom">mcp.fda.gov.tw</span></li>
+<li><a href="https://www.fda.gov.tw/TC/newsContent.aspx?id=31155" target="_blank" rel="noopener noreferrer">食藥署仿單平台建置公告</a><span class="dom">www.fda.gov.tw</span></li>
+<li><a href="https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt" target="_blank" rel="noopener noreferrer">ChatGPT 文件上傳說明</a><span class="dom">help.openai.com</span></li>
+<li>個別藥品的對應仿單深層連結：<strong>查無</strong>，須依實際藥品查找，不能代填。</li>
+</ul>
+</details></section><nav class="pager" aria-label="前後課程"><a class="prev" href="day07.html"><span>← 前一天</span>第 7 天 看懂合約與帳單</a><a class="next" href="day09.html"><span>下一天 →</span>第 9 天 記帳、預算與比價</a></nav></article></main><aside class="toc" aria-label="本頁目錄"><div class="t">本頁</div><a href="#part1">看懂檢查報告用語：只做白話整理，不做診斷</a><a href="#part2">用藥問題整理：問藥師前的準備</a></aside><nav class="bottombar" aria-label="前後課程"><a href="day07.html">← 第 7 天</a><a href="day09.html">第 9 天 →</a></nav></body></html>
